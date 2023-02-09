@@ -1,1 +1,31 @@
 # Trip-Planner
+
+## [Live](#)
+### Date : Feb 09, 2023
+
+
+### By: Tyler Coats
+- [LinkedIn](www.linkedin.com/in/tylerccoats)
+- [GitHub](https://github.com/TylersCoffeeCode)
+- [Trello Board](https://trello.com/b/etKCVWIV/trip-planner)
+
+## Description
+Full stack application, using React js and mongoDb, that gives users tools to create and plan out their vacations.
+
+## Technologies Used
+- React JS
+- MongoDB
+- Express
+
+## Objectives
+  - Using React Js and MongoDB, create a full stack application where users can create,update, and delete entries
+  - Utilize flexbox/grid
+  - Contain at least 2 Mongoose Schemas, 40 git commits, code should display date from the back end, and navigate with react router
+
+# Preview
+
+
+# Instructions
+
+### Resources
+
