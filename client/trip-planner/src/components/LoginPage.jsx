@@ -22,11 +22,18 @@ const LoginPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(`Username: ${email} Password: ${password}`)
-    let user = {email, password}
-    let response = await axios.get('http://localhost:3001/api/users', user)
-    console.log(response);
-    setEmail('')
-    setPassword('')
+    try {
+      let user = {email, password}
+      let response = await axios.post('http://localhost:3001/api/login', user)
+      console.log(response.data);
+      if (response.data.message === 'Login successful') {
+        console.log('NICE');
+      }
+      setEmail('')
+      setPassword('')
+    } catch {
+      console.log();
+    }
   }
 
   
