@@ -5,46 +5,53 @@ import { Link } from 'react-router-dom'
 const LoginPage = () => {
   
   
-  const initialState = {
-    email: '',
-    password: '',
-  }
-  
-  const [form, setForm] = useState(initialState)
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
-  const handleChange = (e) => {
-    setForm({...form, [e.target.id]: e.target.value})
+
+
+  const handleChangeEmail = (e) => {
+    setEmail(e.target.value)
   }
+
+  const handleChangePassword = (e) => {
+    setPassword(e.target.value)
+  }
+
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    let response = await axios.get('http://localhost:3001/api/users/')
-    setForm(initialState)
-    console.log(response)
-    console.log(initialState)
+    e.preventDefault();
+    console.log(`Username: ${email} Password: ${password}`)
+    let user = {email, password}
+    let response = await axios.get('http://localhost:3001/api/users', user)
+    console.log(response);
+    setEmail('')
+    setPassword('')
   }
-  
+
   
   return (
     <div className="loginPage">
       <div className="loginForm">
         <h1>Login</h1>
-        <form>
+        <form onSubmit={handleSubmit}>
             <label htmlFor="email">Email:</label>
             <input
             id="email"
             type='email'
-            onChange={handleChange}
+            onChange={handleChangeEmail}
+            value={email}
             />
             <br />
             <label htmlFor="password">Password:</label>
             <input
             id="password"
             type='password'
-            onChange={handleChange}
+            onChange={handleChangePassword}
+            value={password}
             />
             <br />
-            <button onClick={handleSubmit}>Sign In</button>
+            <button type="submit">Sign In</button>
         </form>
         <p>or</p>
         {/* <Link>Sign Up</Link> */}
