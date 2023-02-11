@@ -46,10 +46,9 @@ const LoginPage = () => {
     <div className="logInContainer">
       <div className="loginBothContainer" >
         <div className="loginLeftSide" >
-          Hello
         </div>
         <div className="loginRightSide">
-          <h1>Welcome to Horizon</h1>
+          <h1 style={{fontSize: '2rem'}}>Welcome to Horizon</h1>
           <h2>Let's see beyond</h2>
           <h3>Please Log In</h3>
           <form className="signInForm" onSubmit={handleSubmit}>
@@ -69,7 +68,7 @@ const LoginPage = () => {
               value={password}
             />
             <br />
-            <button type="submit" style={{ marginRight: '4em', borderRadius: '20px', border: 'none', outline: 'none' }}>Sign In</button>
+          <button type="submit" style={{ marginRight: '4em', borderRadius: '20px', border: 'none', outline: 'none', width: '20%', marginLeft: '4em'}}>Sign In</button>
           </form>
           <h3>or</h3>
           <Link to={'/sign-up'}><h4>Create an account</h4></Link>

@@ -9,7 +9,7 @@ import SignUpPage from './pages/SignUpPage';
 
 function App() {
   return (
-    <div>
+    <div className='test'>
       <main>
         <Routes>
           <Route path='/' element={<SignInPage />} />

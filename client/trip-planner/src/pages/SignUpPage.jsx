@@ -1,7 +1,9 @@
+import CreateUser from "../components/CreateUser"
+
 const SignUpPage = () => {
   return (
-    <div>
-        <h1>SIGN UP</h1>
+    <div >
+        <CreateUser />
     </div>
   )
 }
