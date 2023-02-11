@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+html {
+  background-color: #44008b;
+  background: url(./img/earth.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+background-position: center center;
+background-attachment: fixed;
+
+}
+
+.loginLeftSide {
+  background: url(./img/portrait.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.loginRightSide {
+  background: url(./img/login.jpg);
+  background-size: cover;
+}
