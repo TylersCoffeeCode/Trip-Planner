@@ -43,18 +43,18 @@ const LoginPage = () => {
 
 
   return (
-    <div className="logInContainer" style={{ display: "flex", textAlign: 'center', width: '80vh', height: '80vh', margin: '80px auto', top: '8em' }}>
-      <div className="loginBothContainer" style={{display: 'flex', marginTop: '3em'}}>
-        <div className="loginLeftSide" style={{ width: '15em', height: '100%', borderRadius: '50px 0px 0px 50px'}}>
+    <div className="logInContainer">
+      <div className="loginBothContainer" >
+        <div className="loginLeftSide" >
           Hello
         </div>
-        <div className="loginRightSide" style={{ backgroundColor: '#87889c', width: '29em', borderRadius: '0 50px 50px 0' }}>
+        <div className="loginRightSide">
           <h1>Welcome to Horizon</h1>
           <h2>Let's see beyond</h2>
           <h3>Please Log In</h3>
-          <form onSubmit={handleSubmit} style={{ width: '15em', textAlign: 'right', margin: '0 auto', marginLeft: '4.5em'}}>
+          <form className="signInForm" onSubmit={handleSubmit}>
             <label htmlFor="email">Email:</label>
-            <input style={{ margin: '6px', border: 'none', outline: 'none', borderRadius: '20px', height: '2em', padding: '0 6px' }}
+            <input className="emailInput"
               id="email"
               type='email'
               onChange={handleChangeEmail}
@@ -62,7 +62,7 @@ const LoginPage = () => {
             />
             <br />
             <label htmlFor="password">Password:</label>
-            <input style={{ margin: '6px', border: 'none', outline: 'none', borderRadius: '20px', height: '2em', padding: '0 6px' }}
+            <input className="passwordInput"
               id="password"
               type='password'
               onChange={handleChangePassword}

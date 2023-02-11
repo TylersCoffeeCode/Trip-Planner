@@ -32,6 +32,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -42,18 +43,70 @@ html {
   background: url(./img/earth.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-background-position: center center;
-background-attachment: fixed;
+  background-position: center center;
+  background-attachment: fixed;
+}
 
+.signInPage {
+  background-color: rgba(255,252,252,0.2);
+  width: 60%;
+  margin: 0 auto;
+  height: 86vh;
+  border-radius: 40px;
+}
+
+.logInContainer {
+  display: flex;
+  text-align: center;
+  width: 80vh;
+  height: 80vh;
+  margin: 80px auto;
+  top: 8em;
+}
+
+.loginBothContainer {
+  display: flex;
+  margin-top: 3em;
 }
 
 .loginLeftSide {
   background: url(./img/portrait.jpg);
   background-size: cover;
   background-position: center center;
+  width: 15em;
+  height: 100%;
+  border-radius: 50px 0px 0px 50px;
+  border-right: 2px solid black;
 }
 
 .loginRightSide {
   background: url(./img/login.jpg);
   background-size: cover;
+  width: 29em;
+  border-radius: 0 50px 50px 0;
+}
+
+.signInForm {
+  width: 15em;
+  text-align: right;
+  margin: 0 auto;
+  margin-left: 4.5em
+}
+
+.emailInput {
+  margin: 6px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  height: 2em;
+  padding: 0 6px 
+}
+
+.passwordInput {
+  margin: 6px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  height: 2em;
+  padding: 0 6px 
 }
