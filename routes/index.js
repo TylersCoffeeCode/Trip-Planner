@@ -16,9 +16,9 @@ router.post('/login', async (req, res) => {
     const { email, password } = req.body
     User.findOne({ email }, (error, user) => {
         if (!user) {
-            return res.status(400).json({ message: 'email not found' })
+            return res.status(401).json({ message: 'Email not found' })
         } else if (user.password !== password) {
-            return res.status(400).json({ message: 'Your password is incorrect' })
+            return res.status(402).json({ message: 'Your password is incorrect' })
         } else if (user.password === password) {
             res.status(200).json({ message: 'Login successful', id: user._id })
         }

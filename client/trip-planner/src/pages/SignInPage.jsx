@@ -2,10 +2,10 @@ import LoginPage from "../components/LoginPage"
 
 
 
-const SignInPage = () => {
+const SignInPage = ({setIsLoggedIn}) => {
   return (
-    <div className="signInPage" style={{}}>
-        <LoginPage />
+    <div className="signInPage background" style={{}}>
+        <LoginPage setIsLoggedIn={setIsLoggedIn}/>
     </div>
   )
 }
