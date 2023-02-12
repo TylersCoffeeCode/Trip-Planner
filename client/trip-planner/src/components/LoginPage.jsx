@@ -1,12 +1,13 @@
 import { useState } from "react"
 import axios from 'axios'
-import { Link, Navigate } from 'react-router-dom'
+import { Link, Navigate, useParams } from 'react-router-dom'
 import { useNavigate } from "react-router-dom"
 
 
 const LoginPage = () => {
 
   let navigate = useNavigate()
+  const { id } = useParams()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
@@ -27,10 +28,10 @@ const LoginPage = () => {
     try {
       let user = { email, password }
       let response = await axios.post('http://localhost:3001/api/login', user)
-      console.log(response.data);
+      console.log(response);
       if (response.data.message === 'Login successful') {
         console.log('NICE');
-        navigate('/user/dashboard')
+        navigate(`/user/dashboard/${response.data.id}`)
       } else {
         console.log(response.data.message);
       }

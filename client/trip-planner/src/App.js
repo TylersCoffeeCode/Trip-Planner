@@ -11,7 +11,7 @@ function App() {
       <main className='main'>
         <Routes>
           <Route path='/' element={<SignInPage />} />
-          <Route path='/user/dashboard' element={<Dashboard />} />
+          <Route path='/user/dashboard/:id' element={<Dashboard />} />
           <Route path='/sign-up' element={<SignUpPage />}/>
         </Routes>
       </main>

@@ -22,6 +22,17 @@ const getUserById = async (req, res) => {
     }
 }
 
+
+const getUserByEmail = async (req, res) => {
+    try {
+        const { email } = req.params
+        const users = await User.findOne(email)
+        return res.status(200).json({ users })
+    } catch (error) {
+        return res.status(500).send(error.message)
+    }
+}
+
 const createUser = async (req, res) => {
     try {
         const users = await new User(req.body)
@@ -107,5 +118,6 @@ module.exports = {
     deleteUser,
     createVacation,
     getUserIdVacations,
-    updateUserIdVacation
+    updateUserIdVacation,
+    getUserByEmail
 }
