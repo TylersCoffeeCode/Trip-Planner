@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import './components/LoginPage'
 import LoginPage from './components/LoginPage';
@@ -9,15 +8,13 @@ import SignUpPage from './pages/SignUpPage';
 
 function App() {
   return (
-    <div className='test'>
-      <main>
+      <main className='main'>
         <Routes>
           <Route path='/' element={<SignInPage />} />
           <Route path='/user/dashboard' element={<Dashboard />} />
           <Route path='/sign-up' element={<SignUpPage />}/>
         </Routes>
       </main>
-    </div>
   );
 }
 

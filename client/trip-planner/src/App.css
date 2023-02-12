@@ -38,17 +38,27 @@
   }
 }
 
-html {
-
-}
-
 body {
   background-color: #44008b;
-  background: url(./img/background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url(./img/background.jpg);
+  background-size: cover;
+}
+
+.test {
+  height: 100vh;
 }
 
 .signInPage {
@@ -58,6 +68,7 @@ body {
   height: 86vh;
   border-radius: 40px;
   min-width: auto;
+
 }
 
 .signUpPage {
@@ -66,22 +77,24 @@ body {
   margin: 0 auto;
   height: 86vh;
   border-radius: 40px;
-  margin-top: 5em;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .logInContainer {
   display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   width: 100%;
   height: 100%;
-  margin: 80px auto;
-  top: 8em;
+
 }
 
 .loginBothContainer {
   margin: 0 auto;
   display: flex;
-  margin-top: 3em;
 }
 
 .loginLeftSide {
@@ -108,6 +121,11 @@ body {
   /* text-align: right; */
 }
 
+.signUpForm {
+  display: inline-block;
+  width: 100%;
+}
+
 .emailInput {
   margin: 0 auto;
   border: none;
@@ -115,6 +133,7 @@ body {
   border-radius: 20px;
   height: 2em;
   width: 30%;
+  padding-left: 0.5em;
 }
 
 .passwordInput {
@@ -125,6 +144,8 @@ body {
   height: 2em;
   width: 30%;
   margin-right: 2rem;
+  padding-left: 0.5em;
+
 
 }
 

@@ -2,7 +2,7 @@ import CreateUser from "../components/CreateUser"
 
 const SignUpPage = () => {
   return (
-    <div >
+    <div className="signUpPage">
         <CreateUser />
     </div>
   )
