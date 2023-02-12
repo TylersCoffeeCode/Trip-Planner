@@ -18,8 +18,10 @@ function App() {
   useEffect(() => {
     if (location.pathname === '/sign-up') {
       setBackgroundImg(signUpBackgroundImage)
-    } else {
+    } else if (location.pathname === '/'){
       setBackgroundImg(backgroundImage)
+    } else {
+      setBackgroundImg(null)
     }
   }, [location.pathname])
 
@@ -34,7 +36,7 @@ function App() {
       <main className='main' >
         <Routes>
           <Route path='/' element={<SignInPage setIsLoggedIn={setIsLoggedIn}/>} />
-          <Route path='/user/dashboard/:id' element={<Dashboard />} />
+          <Route path='/user/dashboard/:id' element={<Dashboard setIsLoggedIn={setIsLoggedIn}/>} />
           <Route path='/sign-up' element={<SignUpPage />} />
         </Routes>
       </main>

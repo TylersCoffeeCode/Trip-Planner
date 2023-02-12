@@ -29,6 +29,7 @@
   width: 100vw;
   height: 100vh;
   background-size: cover;
+  background-color: #282c34;
 }
 
 .navBar {
@@ -39,9 +40,10 @@
   background-color: rgba(255, 252, 252, .4);
   width: 80%;
   height: 2em;
-  margin-top: 5px;
   margin-left: 10%;
-  border-radius: 40px;
+  padding-bottom: .5em;
+  border-radius: 0 0 20px 20px;
+  text-decoration: none;
 }
 
 ul {
@@ -54,11 +56,13 @@ ul {
 
 li:first-child {
   margin-right: auto;
+  margin-top: .2em;
 }
 
 li:not(:first-child) {
   margin: 0 10px;
 }
+
 
 .main {
   height: 98vh;
@@ -187,4 +191,8 @@ li:not(:first-child) {
 h4 {
   color: red;
   font-size: large;
+}
+
+.dashboard {
+  background-color: #61dafb;
 }
