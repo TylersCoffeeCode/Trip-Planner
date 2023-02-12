@@ -145,8 +145,17 @@ body {
   width: 30%;
   margin-right: 2rem;
   padding-left: 0.5em;
+}
 
-
+.nameField {
+  margin: 6px auto;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  height: 2em;
+  width: 20%;
+  margin-right: 2rem;
+  padding-left: 0.5em;
 }
 
 

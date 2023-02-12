@@ -23,6 +23,19 @@ router.post('/login', async (req, res) => {
     });
 })
 
+
+router.post('/createUser', async (req, res) => {
+    try {
+        const user = await new User(req.body)
+        await user.save()
+        return res.status(201).json({
+            user
+        })
+    } catch (e) {
+        return res.status(500).json({error: e.message})
+    }
+})
+
 router.put('/users/:id', controllers.updateUser)
 router.delete('/users/:id', controllers.deleteUser)
 
