@@ -20,13 +20,20 @@ const Dashboard = ({ setIsLoggedIn }) => {
           <div className="leftSectionTileMap">
             <div className="mapTile">
               Map
-              </div>
+            </div>
             <div className="mapInfo">
               info
             </div>
           </div>
-          <section className="leftSectionTiles"></section>
-          <section className="leftSectionTiles"></section>
+          <div className="leftSectionTilePhoto">
+            <div className="photoTileTitle">
+              <h3 style={{margin: 0}}>Need some inspiration?</h3>
+              <h3 style={{margin: 0}}>Take a look at our gallery</h3>
+            </div>
+            <div className="photoTileApi">
+
+            </div>
+          </div>
         </div>
       </div>
       <div className="outerDashboardRight">
