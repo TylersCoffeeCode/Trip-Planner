@@ -25,7 +25,7 @@ const Gallery = ({ setIsLoggedIn }) => {
     const getPhotos = async (e) => {
         e.preventDefault()
         try {
-            let response = await axios.get(`https://api.pexels.com/v1/search?query=${query}&per_page=25`, {
+            let response = await axios.get(`https://api.pexels.com/v1/search?query=${query} travel&per_page=25`, {
                 headers: {
                     Authorization: process.env.REACT_APP_PEXEL_API
                 }

@@ -407,7 +407,7 @@ h4 {
 .search {
   border-radius: 20px;
   width: 100%;
-  height: 6%;
+  height: 8%;
   background-color: black;
 }
 
@@ -452,7 +452,7 @@ input.searchInput {
   color: white;
   background-color: black;
   width: 40%;
-  height: 40em;
+  height: 50em;
   margin: 2em;
 
 }
@@ -462,3 +462,69 @@ img.cardImg {
   width: 80%;
   height: 80%;
 }
+
+
+.plannerMainDiv {
+  width: 100vw;
+  height: 100vh;
+  background-color: blanchedalmond;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.plannerOuterDiv {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: start;
+  background-color: whitesmoke;
+  border: 2px solid black;
+  width: 88vw;
+  height: 85vh;
+}
+
+.plannerTitle {
+  background-color: rgb(151, 151, 151);
+  width: 100%;
+  height: 10%;
+  font-size: 50px;
+}
+
+.createCard {
+  background-color: white;
+  border-radius: 20px;
+  width: 300px;
+  height: 300px;
+  margin: 2em;
+  transition: 0.5s;
+}
+
+.createCard:hover {
+  transform: scale(1.08);
+}
+
+.createCardPlusDiv {
+  background-color: rgb(177, 174, 174);
+  border-radius: 20px;
+  border: 2px solid aqua;
+  width: 60%;
+  height: 60%;
+  margin: auto;
+  margin-top: 3.7em;  
+}
+
+.plus {
+  width: 150px;
+  height: 150px;
+  line-height: 33px;
+  font-size: 35px;
+  margin: auto auto;
+  margin-top: 2em;
+}
+
+.createVacationDiv {
+  background-color: bisque;
+  width: 100vw;
+  height: 100vh;
+}
+

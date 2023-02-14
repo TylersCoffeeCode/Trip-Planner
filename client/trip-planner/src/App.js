@@ -13,6 +13,7 @@ import NavBar from './components/NavBar';
 import Map from './pages/Map';
 import Gallery from './pages/Gallery';
 import Planner from './pages/Planner';
+import CreateVacation from './pages/CreateVacation';
 
 // import { createClient } from 'pexels';
 
@@ -38,6 +39,8 @@ function App() {
       setBackgroundImg(null)
     } else if (location.pathname === '/planner') {
       setBackgroundImg(null)
+    } else if (location.pathname === '/planner/create') {
+      setBackgroundImg(null)
     }
       else {
       setBackgroundImg(dashImg)
@@ -60,8 +63,9 @@ function App() {
           <Route path='/map' element={<Map setIsLoggedIn={setIsLoggedIn} />} />
           <Route path='/gallery' element={<Gallery setIsLoggedIn={setIsLoggedIn} />} />
           <Route path='/planner' element={<Planner setIsLoggedIn={setIsLoggedIn} />} />
+          <Route path='/planner/create' element={<CreateVacation setIsLoggedIn={setIsLoggedIn} />} />
         </Routes>
-      </main>
+      </main> 
     </div>
 
   );
