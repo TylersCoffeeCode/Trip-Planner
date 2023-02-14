@@ -10,13 +10,7 @@ const Dashboard = ({ setIsLoggedIn }) => {
   }, [])
 
   const navigate = useNavigate()
-
   const { id } = useParams()
-
-  const handleMapClick = () => {
-
-  }
-
   const sessionId = sessionStorage.getItem("userId");
 
   return (
@@ -38,8 +32,8 @@ const Dashboard = ({ setIsLoggedIn }) => {
           </div>
           <div className="leftSectionTilePhoto" onClick={() => navigate('/gallery')} style={{cursor: 'pointer'}}>
             <div className="photoTileTitle">
-              <h3 style={{ margin: 0 }}>Need some inspiration?</h3>
-              <h3 style={{ margin: 0 }}>Take a look at our gallery</h3>
+              <h3 style={{ margin: '0' }}>Need some inspiration?</h3>
+              <h3 style={{ margin: '0' }}>Take a look at our search gallery</h3>
             </div>
             <div className="photoTileApi">
             </div>
