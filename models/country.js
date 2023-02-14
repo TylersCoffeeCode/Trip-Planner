@@ -6,7 +6,7 @@ const Country = new Schema(
     {
         country: {type: String, require: true},
         city: {type: String, require: true},
-        image: {type: String, require: true}
+        image: {type: Array, require: true}
     },
     { timestamps: true}
 )

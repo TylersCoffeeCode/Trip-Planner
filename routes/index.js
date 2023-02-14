@@ -2,6 +2,7 @@ const { Router } = require('express')
 const controllers = require('../controllers')
 const router = Router()
 const User = require('../models/user')
+const Country = require('../models/country')
 
 router.get('/', (req, res) => res.send('This is root!'))
 
@@ -35,6 +36,15 @@ router.post('/createUser', async (req, res) => {
         })
     } catch (e) {
         return res.status(500).json({message: 'Error occured'})
+    }
+})
+
+router.get('/gallery', async (req, res) => {
+    try {
+        const photo = await Country.find()
+        return res.status(200).json({photo})
+    } catch(error) {
+        return res.status(500).send(error.message)
     }
 })
 

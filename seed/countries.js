@@ -5,8 +5,8 @@ db.on('error', console.error.bind(console, 'MongoDB connection error'))
 
 const main = async () => {
     const countries = [
-        { country: "France", city: "Paris", image: "" },
-        { country: "Spain", city: "Madrid", image: "" },
+        { country: "France", city: "Paris", image: ['https://www.pexels.com/photo/eiffel-tower-paris-342113/', 'https://www.pexels.com/photo/france-flag-on-gray-concrete-building-near-road-2272939/', 'https://www.pexels.com/photo/people-walking-in-front-of-louvre-museum-7366990/'] },
+        { country: "Spain", city: "Madrid", image: ['https://www.pexels.com/photo/yellow-and-beige-high-rise-building-3254729/','https://www.pexels.com/photo/white-and-black-concrete-statues-under-blue-sky-3763907/','https://www.pexels.com/photo/symmetrical-view-of-an-illuminated-cathedral-and-woman-in-a-yellow-dress-photographing-10945203/'] },
         { country: "United States", city: "Washington D.C.", image: "" },
         { country: "Italy", city: "Rome", image: "" },
         { country: "United Kingdom", city: "London", image: "" },

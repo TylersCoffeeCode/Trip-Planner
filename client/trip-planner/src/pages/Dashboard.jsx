@@ -36,7 +36,7 @@ const Dashboard = ({ setIsLoggedIn }) => {
               Give our map a spin!
             </div>
           </div>
-          <div className="leftSectionTilePhoto" onClick={() => navigate('/')} style={{cursor: 'pointer'}}>
+          <div className="leftSectionTilePhoto" onClick={() => navigate('/gallery')} style={{cursor: 'pointer'}}>
             <div className="photoTileTitle">
               <h3 style={{ margin: 0 }}>Need some inspiration?</h3>
               <h3 style={{ margin: 0 }}>Take a look at our gallery</h3>
@@ -56,8 +56,6 @@ const Dashboard = ({ setIsLoggedIn }) => {
           </div>
         </div>
       </div>
-
-
     </div>
   )
 }

@@ -11,6 +11,7 @@ import signUpBackgroundImage from './img/horizon.jpg'
 import dashImg from './img/dashboard.jpg'
 import NavBar from './components/NavBar';
 import Map from './pages/Map';
+import Gallery from './pages/Gallery';
 
 function App() {
   let location = useLocation()
@@ -26,6 +27,7 @@ function App() {
       setBackgroundImg(backgroundImage)
     } else if (location.pathname === '/map') {
       setBackgroundImg(null)
+    } else if (location.pathname === '/gallery') {
       setBackgroundImg(null)
     } else {
       setBackgroundImg(dashImg)
@@ -46,6 +48,7 @@ function App() {
           <Route path='/user/dashboard/:id' element={<Dashboard setIsLoggedIn={setIsLoggedIn} />} />
           <Route path='/sign-up' element={<SignUpPage />} />
           <Route path='/map' element={<Map setIsLoggedIn={setIsLoggedIn} />} />
+          <Route path='/gallery' element={<Gallery setIsLoggedIn={setIsLoggedIn} />} />
         </Routes>
       </main>
     </div>
