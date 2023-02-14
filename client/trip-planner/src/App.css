@@ -523,8 +523,21 @@ img.cardImg {
 }
 
 .createVacationDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: bisque;
   width: 100vw;
   height: 100vh;
+}
+
+.pageDiv {
+  width: 40vw;
+  height: 85vh;
+  background-color: cadetblue;
+}
+
+.vacationForm {
+
 }
 
