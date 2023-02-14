@@ -5,14 +5,16 @@ const NavBar = () => {
 
     let logoImg = logo
 
+  const sessionId = sessionStorage.getItem("userId");
+
+
     return (
         <div className="navBar">
             <ul>
-                <li><Link to={'/'}> <img src={logoImg} style={{width: '2em', height: '2em'}}/> 
-                </Link></li>
-                <li><Link to={'/'} style={{textDecoration: 'underline', color: 'white'}}>Your Vacations</Link></li>
-                <li><Link to={'/'} style={{textDecoration: 'underline', color: 'white'}}>Create A Vacation</Link></li>
-                <li><Link to={'/'} style={{textDecoration: 'underline', color: 'white'}}>About</Link></li>
+                <li className="navLi"><Link to={`/user/dashboard/${sessionId}`} style={{color: 'white'}}>HOME</Link></li>
+                <li className="navLi"><Link to={'/'} style={{textDecoration: 'underline', color: 'white'}}>YOUR VACATIONS</Link></li>
+                <li className="navLi"><Link to={'/'} style={{textDecoration: 'underline', color: 'white'}}>CREATE VACATION</Link></li>
+                <li className="navLi"><Link to={'/'} style={{textDecoration: 'underline', color: 'white'}}>ABOUT</Link></li>
             </ul>
         </div>
     )

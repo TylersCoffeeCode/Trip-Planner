@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom"
 const LoginPage = ({setIsLoggedIn}) => {
 
   let navigate = useNavigate()
-  const { id } = useParams()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
@@ -40,7 +39,7 @@ const LoginPage = ({setIsLoggedIn}) => {
       console.log(response);
       if (response.data.message === 'Login successful') {
         console.log('NICE');
-        // sessionStorage.setItem('userId', response.data.id)
+        sessionStorage.setItem('userId', response.data.id)
         navigate(`/user/dashboard/${response.data.id}`)
         setIsLoggedIn(true)
       } else {
