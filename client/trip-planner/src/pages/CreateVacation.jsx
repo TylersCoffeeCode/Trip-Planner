@@ -10,7 +10,6 @@ const CreateVacation = ({ setIsLoggedIn }) => {
 
     const [travelLocation, setTravelLocation] = useState("")
 
-    const [budget, setBudget] = useState("")
     const [numberTravelers, setNumberTravelers] = useState("")
 
     const [questionOne, setQuestionOne] = useState("")
@@ -18,6 +17,7 @@ const CreateVacation = ({ setIsLoggedIn }) => {
     const [questionThree, setQuestionThree] = useState("")
 
     const [freeForm, setFreeForm] = useState("")
+
 
 
     return (
@@ -29,8 +29,8 @@ const CreateVacation = ({ setIsLoggedIn }) => {
                         Number of travelers
                         <input style={{ margin: '0.5em', width: '2em' }}
                             type='number'
-                            value={travelLocation}
-
+                            value={numberTravelers}
+                            onChange={e => setNumberTravelers(e.target.value)}
                         />
                     </label>
 
@@ -40,7 +40,7 @@ const CreateVacation = ({ setIsLoggedIn }) => {
                         <input
                             type='text'
                             value={travelLocation}
-
+                        onChange={e => setTravelLocation(e.target.value)}
                         />
                     </label>
                     <br />
@@ -52,6 +52,7 @@ const CreateVacation = ({ setIsLoggedIn }) => {
                         <input
                             type='text'
                             value={questionOne}
+                            onChange={e => setQuestionOne(e.target.value)}
                         />
                     </label>
                     <br />
@@ -61,6 +62,7 @@ const CreateVacation = ({ setIsLoggedIn }) => {
                         <input
                             type='text'
                             value={questionTwo}
+                            onChange={e => setQuestionTwo(e.target.value)}
                         />
                     </label>
                     <br />
@@ -70,11 +72,13 @@ const CreateVacation = ({ setIsLoggedIn }) => {
                         <input
                             type='text'
                             value={questionThree}
-
+                            onChange={e => setQuestionThree(e.target.value)}
                         />
                     </label>
                     <h2>Additional Info:</h2>
                     <textarea style={{ width: '400px', height: '150px' }}
+                    value={freeForm}
+                    onChange={e => setFreeForm(e.target.value)}
                     />
                     <br />
                     <button type="submit">Submit</button>
