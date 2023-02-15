@@ -5,10 +5,10 @@ const Schema = mongoose.Schema
 const Vacation = new Schema(
     {
         user_id: {type: Schema.Types.ObjectId, ref: 'User'},
-        location: {type: String, require: true},
-        arrivalDate: {type: String, require: true},
-        ratings: {type: String, require: true},
-        popularHotels: {type: String, require: true},
+        numberOfTravelers: {type: String, required: true},
+        location: {type: String, required: true},
+        activities: {type: Array, required: true},
+        extraInfo: {type: String, required: true},
 
 
     }, { timestamps: true }

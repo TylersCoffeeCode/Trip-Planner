@@ -526,7 +526,7 @@ img.cardImg {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: bisque;
+  background-color: whitesmoke;
   width: 100vw;
   height: 100vh;
 }
@@ -534,7 +534,8 @@ img.cardImg {
 .pageDiv {
   width: 40vw;
   height: 85vh;
-  background-color: cadetblue;
+  background-color: antiquewhite;
+  border: 2px solid black;
 }
 
 .vacationForm {
