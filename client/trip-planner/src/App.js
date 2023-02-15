@@ -62,8 +62,8 @@ function App() {
           <Route path='/sign-up' element={<SignUpPage />} />
           <Route path='/map' element={<Map setIsLoggedIn={setIsLoggedIn} />} />
           <Route path='/gallery' element={<Gallery setIsLoggedIn={setIsLoggedIn} />} />
-          <Route path='/planner' element={<Planner setIsLoggedIn={setIsLoggedIn} />} />
-          <Route path='/planner/create' element={<CreateVacation setIsLoggedIn={setIsLoggedIn} />} />
+          <Route path='/planner/:id' element={<Planner setIsLoggedIn={setIsLoggedIn} />} />
+          <Route path='/planner/:id/create' element={<CreateVacation setIsLoggedIn={setIsLoggedIn} />} />
         </Routes>
       </main> 
     </div>

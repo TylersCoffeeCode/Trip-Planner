@@ -43,7 +43,7 @@ const Dashboard = ({ setIsLoggedIn }) => {
       <div className="outerDashboardRight" >
         <div className="dashboardRightTitle">
         </div>
-        <div className="dashboardRightTileMain" onClick={() => navigate('/planner')} style={{cursor: 'pointer'}}>
+        <div className="dashboardRightTileMain" onClick={() => navigate(`/planner/${id}`)} style={{cursor: 'pointer'}}>
           <div className="dashboardRightTileText">
           <h2 style={{ margin: '0', color: 'white', width: '100%', height: '1em'}}>Ready to Plan?</h2>
           <h3 style={{ margin: '0', color: 'white' }}>Click here now to get started!</h3>

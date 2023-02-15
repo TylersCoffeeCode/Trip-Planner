@@ -7,7 +7,9 @@ const Vacation = new Schema(
         user_id: {type: Schema.Types.ObjectId, ref: 'User'},
         numberOfTravelers: {type: String, required: true},
         location: {type: String, required: true},
-        activities: {type: Array, required: true},
+        questionOne: {type: String, required: true},
+        questionTwo: {type: String, required: true},
+        questionThree: {type: String, required: true},
         extraInfo: {type: String, required: true},
 
 

@@ -51,7 +51,9 @@ router.get('/gallery', async (req, res) => {
 router.put('/users/:id', controllers.updateUser)
 router.delete('/users/:id', controllers.deleteUser)
 
-router.post('/users/vacations/:id', controllers.createVacation)
+router.post('/create/vacations/:id', controllers.createVacation)
+
+
 router.get('/users/vacations/:id', controllers.getUserIdVacations)
 router.put('/users/vacations/:id', controllers.updateUserIdVacation)
 

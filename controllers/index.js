@@ -72,8 +72,18 @@ const createVacation = async (req, res) => {
     try {
         console.log(req.body)
         const { id } =  req.params
-        req.body = { ...req.body, user_id: id }
-        const vacations = await new Vacation(req.body)
+        const { numberOfTravelers, location, questionOne, questionTwo, questionThree, freeForm } = req.body
+        // req.body = { ...req.body, user_id: id }
+
+        const vacations = await new Vacation({
+            user_id: id,
+            numberOfTravelers,
+            location,
+            questionOne,
+            questionTwo,
+            questionThree,
+            extraInfo: freeForm,
+        })
         await vacations.save()
         return res.status(200).json({
             vacations

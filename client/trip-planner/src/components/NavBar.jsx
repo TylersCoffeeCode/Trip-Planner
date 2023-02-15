@@ -12,9 +12,9 @@ const NavBar = () => {
         <div className="navBar">
             <ul>
                 <li className="navLi"><Link to={`/user/dashboard/${sessionId}`} style={{color: 'white'}}>HOME</Link></li>
-                <li className="navLi"><Link to={'/'} style={{textDecoration: 'underline', color: 'white'}}>YOUR VACATIONS</Link></li>
-                <li className="navLi"><Link to={'/'} style={{textDecoration: 'underline', color: 'white'}}>CREATE VACATION</Link></li>
-                <li className="navLi"><Link to={'/'} style={{textDecoration: 'underline', color: 'white'}}>ABOUT</Link></li>
+                <li className="navLi"><Link to={`/planner/${sessionId}`} style={{textDecoration: 'underline', color: 'white'}}>YOUR VACATIONS</Link></li>
+                <li className="navLi"><Link to={`/planner/${sessionId}/create`} style={{textDecoration: 'underline', color: 'white'}}>CREATE VACATION</Link></li>
+                <li className="navLi"><Link to={``} style={{textDecoration: 'underline', color: 'white'}}>ABOUT</Link></li>
             </ul>
         </div>
     )
