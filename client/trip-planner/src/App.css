@@ -230,7 +230,7 @@ h4 {
 
 .outerDashboardRight {
   background-color: rgba(255, 252, 252, 0.706);
-  width: 54%;
+  width: 52%;
   height: 80%;
   border-radius: 40px 40px 40px 40px;
 
@@ -333,7 +333,7 @@ h4 {
 .dashboardRightTileMain {
   margin: 20px auto;
   /* background-color: #61dafb; */
-  width: 85%;
+  width: 80%;
   height: 85%;
   border-radius: 20px 20px 20px 20px;
   background-image: url(./img/dashboardRight.jpg);
@@ -477,10 +477,12 @@ img.cardImg {
   display: flex;
   flex-wrap: wrap;
   align-content: start;
+  justify-content: space-around;
   background-color: whitesmoke;
   border: 2px solid black;
   width: 88vw;
   height: 85vh;
+  overflow: scroll;
 }
 
 .plannerTitle {
@@ -538,7 +540,22 @@ img.cardImg {
   border: 2px solid black;
 }
 
-.vacationForm {
-
+.vacationCard {
+  width: 300px;
+  height: 300px;
+  margin: 2em;
+  border-radius: 20px;
+  background-color: lightsteelblue;
+  border: 2px solid black;
+  transition: 0.5s;
 }
 
+.vacationCard:hover {
+  transform: scale(1.08);
+}
+
+.button {
+  /* margin-top: 6em; */
+  width: 60px;
+  height: 20px;
+}

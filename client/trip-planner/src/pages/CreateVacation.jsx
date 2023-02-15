@@ -1,12 +1,13 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
 
 
 const CreateVacation = ({ setIsLoggedIn }) => {
 
     const { id } = useParams()
+    const navigate = useNavigate()
 
     useEffect(() => {
         setIsLoggedIn(true)
@@ -93,6 +94,7 @@ const CreateVacation = ({ setIsLoggedIn }) => {
                     />
                     <br />
                     <button type="submit">Submit</button>
+                    {/* onClick={() => navigate(`/planner/${id}`)} */}
                 </form>
             </div>
         </div >
