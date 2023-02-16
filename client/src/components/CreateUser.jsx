@@ -45,7 +45,7 @@ const CreateUser = () => {
         } else {
             try {
                 let user = { firstName, lastName, email, password }
-                let response = await axios.post('http://localhost:3001/api/createUser', user)
+                let response = await axios.post('/api/createUser', user)
                 console.log(response)
                 if (response.data.message === 'User Created') {
                     navigate(`/user/dashboard/${response.data.id}`)

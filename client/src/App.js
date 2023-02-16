@@ -63,7 +63,6 @@ function App() {
           <Route path='/planner/:id' element={<Planner setIsLoggedIn={setIsLoggedIn} />} />
           <Route path='/planner/:id/create' element={<CreateVacation setIsLoggedIn={setIsLoggedIn} />} />
           <Route path='/users/vacations/:id' element={<EditVacation setIsLoggedIn={setIsLoggedIn} />} />
-
         </Routes>
       </main> 
     </div>
