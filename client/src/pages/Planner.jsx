@@ -16,7 +16,7 @@ const Planner = ({ setIsLoggedIn }) => {
 
     const getVacations = async () => {
         try {
-            const response = await axios.get(`http://localhost:3001/api/users/vacations/${id}`)
+            const response = await axios.get(`/api/users/vacations/${id}`)
             console.log(response.data);
             setYourVacation(response.data)
         } catch (error) {
@@ -25,9 +25,9 @@ const Planner = ({ setIsLoggedIn }) => {
 
     const deleteVacation = async (vacation) => {
         console.log(vacation._id);
-        await axios.delete(`http://localhost:3001/api/delete/${vacation._id}`)
+        await axios.delete(`/api/delete/${vacation._id}`)
         try {
-            const response = await axios.get(`http://localhost:3001/api/users/vacations/${id}`)
+            const response = await axios.get(`/api/users/vacations/${id}`)
             console.log(response.data);
             setYourVacation(response.data)
         } catch (error) {

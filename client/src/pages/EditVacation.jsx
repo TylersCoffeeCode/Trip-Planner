@@ -6,7 +6,6 @@ import { useNavigate, useParams, useLocation} from 'react-router-dom'
 
 const EditVacation = ({ setIsLoggedIn }) => {
 
-    const { id } = useParams()
     const navigate = useNavigate()
     const locate = useLocation()
     const sessionId = sessionStorage.getItem("userId");
@@ -26,10 +25,7 @@ const EditVacation = ({ setIsLoggedIn }) => {
     const [questionThree, setQuestionThree] = useState(`${vacation.questionThree}`)
     const [freeForm, setFreeForm] = useState(`${vacation.extraInfo}`)
 
-    const getEditVacation = async (e) => {
-        const response = await axios.get(`http://3001/api/`)
-    }
-
+   
 
     const handleSubmit = async (e) => {
         e.preventDefault()

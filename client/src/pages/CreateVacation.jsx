@@ -27,7 +27,7 @@ const CreateVacation = ({ setIsLoggedIn }) => {
         e.preventDefault()
         let filledForm = { numberOfTravelers, location, questionOne, questionTwo, questionThree, freeForm }
         try {
-        const response = await axios.post(`http://localhost:3001/api/create/vacations/${id}`, filledForm)
+        const response = await axios.post(`/api/create/vacations/${id}`, filledForm)
         navigate(`/planner/${id}`)
         } catch(error) {
             console.log(error);
