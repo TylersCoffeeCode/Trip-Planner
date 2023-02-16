@@ -71,10 +71,8 @@ const deleteUser = async (req, res) => {
 const createVacation = async (req, res) => {
     try {
         console.log(req.body)
-        const { id } =  req.params
+        const { id } = req.params
         const { numberOfTravelers, location, questionOne, questionTwo, questionThree, freeForm } = req.body
-        // req.body = { ...req.body, user_id: id }
-
         const vacations = await new Vacation({
             user_id: id,
             numberOfTravelers,
@@ -96,7 +94,7 @@ const createVacation = async (req, res) => {
 const getUserIdVacations = async (req, res) => {
     try {
         const { id } = req.params
-        const vacations = await Vacation.find({user_id: id})
+        const vacations = await Vacation.find({ user_id: id })
         return res.status(200).json(vacations)
     } catch (error) {
         return res.status(500).send(error.message)
@@ -106,13 +104,26 @@ const getUserIdVacations = async (req, res) => {
 const updateUserIdVacation = async (req, res) => {
     try {
         const { id } = req.params
-        const vacation = await Vacation.findByIdAndUpdate(id, req.body,{new: true} )
+        const vacation = await Vacation.findByIdAndUpdate(id, req.body, { new: true })
         return res.status(200).json(vacation)
     } catch (error) {
         return res.status(500).send(error.message)
     }
 }
 
+const deleteVacation = async (req, res) => {
+    try {
+        const { id } = req.params
+        console.log(id);
+        const deleted = await Vacation.findByIdAndDelete(id)
+        if (deleted) {
+            return res.status(200).send('Vacation deletion')
+        }
+        throw new Error("Vacation Not Found")
+    } catch (error) {
+        return res.status(500).send(error.message)
+    }
+}
 
 
 
@@ -129,5 +140,6 @@ module.exports = {
     createVacation,
     getUserIdVacations,
     updateUserIdVacation,
-    getUserByEmail
+    getUserByEmail,
+    deleteVacation
 }

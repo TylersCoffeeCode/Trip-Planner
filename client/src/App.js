@@ -14,13 +14,12 @@ import Map from './pages/Map';
 import Gallery from './pages/Gallery';
 import Planner from './pages/Planner';
 import CreateVacation from './pages/CreateVacation';
+import EditVacation from './pages/EditVacation';
 
-// import { createClient } from 'pexels';
 
 
 function App() {
 
-  // const client = createClient(process.env.REACT_APP_PEXEL_KEY)
 
   let location = useLocation()
 
@@ -41,8 +40,7 @@ function App() {
       setBackgroundImg(null)
     } else if (location.pathname === '/planner/create') {
       setBackgroundImg(null)
-    }
-      else {
+    } else {
       setBackgroundImg(dashImg)
     }
   }, [location.pathname])
@@ -64,6 +62,8 @@ function App() {
           <Route path='/gallery' element={<Gallery setIsLoggedIn={setIsLoggedIn} />} />
           <Route path='/planner/:id' element={<Planner setIsLoggedIn={setIsLoggedIn} />} />
           <Route path='/planner/:id/create' element={<CreateVacation setIsLoggedIn={setIsLoggedIn} />} />
+          <Route path='/users/vacations/:id' element={<EditVacation setIsLoggedIn={setIsLoggedIn} />} />
+
         </Routes>
       </main> 
     </div>

@@ -1,6 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { Navigate, useNavigate, useParams } from "react-router-dom"
+import { Link, Navigate, useNavigate, useParams } from "react-router-dom"
 
 
 const Planner = ({ setIsLoggedIn }) => {
@@ -20,7 +20,17 @@ const Planner = ({ setIsLoggedIn }) => {
             console.log(response.data);
             setYourVacation(response.data)
         } catch (error) {
+        }
+    }
 
+    const deleteVacation = async (vacation) => {
+        console.log(vacation._id);
+        await axios.delete(`http://localhost:3001/api/delete/${vacation._id}`)
+        try {
+            const response = await axios.get(`http://localhost:3001/api/users/vacations/${id}`)
+            console.log(response.data);
+            setYourVacation(response.data)
+        } catch (error) {
         }
     }
 
@@ -41,8 +51,8 @@ const Planner = ({ setIsLoggedIn }) => {
                         <h2 style={{margin: 0, padding: 0}}>Party of: {vacation.numberOfTravelers}</h2>
                         <p>{vacation.questionOne},{vacation.questionTwo},{vacation.questionThree}</p>
                         <p>{vacation.extraInfo}</p>
-                        <button className="button">Edit</button>
-                        <button className="button">Delete</button>
+                        <Link to={`/users/vacations/${vacation._id}`} state={{vacation: vacation}}><button className="button" >Edit</button></Link>
+                        <button className="button" onClick={() => deleteVacation(vacation)}>Delete</button>
                         </div>
                     ))}
             </div>

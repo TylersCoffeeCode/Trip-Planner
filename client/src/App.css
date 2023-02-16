@@ -379,10 +379,11 @@ h4 {
   background-image: url(./img/worldMap.jpg);
   background-size: contain;
   background-repeat: no-repeat;
-  width: 80vw;
-  height: 80vh;
+  width: 70vw;
+  height: 70vh;
   border-radius: 40px;
   margin: auto;
+  
 
 }
 
@@ -451,7 +452,7 @@ input.searchInput {
   font-size: small;
   color: white;
   background-color: black;
-  width: 40%;
+  width: 30%;
   height: 50em;
   margin: 2em;
 
@@ -543,7 +544,7 @@ img.cardImg {
 .vacationCard {
   width: 300px;
   height: 300px;
-  margin: 2em;
+  margin: 1em;
   border-radius: 20px;
   background-color: lightsteelblue;
   border: 2px solid black;
@@ -557,5 +558,12 @@ img.cardImg {
 .button {
   /* margin-top: 6em; */
   width: 60px;
+  height: 20px;
+}
+
+
+.background {
+  background-color: #61dafb;
+  width: 20px;
   height: 20px;
 }

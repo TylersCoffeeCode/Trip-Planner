@@ -57,6 +57,8 @@ router.post('/create/vacations/:id', controllers.createVacation)
 router.get('/users/vacations/:id', controllers.getUserIdVacations)
 router.put('/users/vacations/:id', controllers.updateUserIdVacation)
 
+router.delete('/delete/:id', controllers.deleteVacation)
+
 
 
 

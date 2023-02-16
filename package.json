@@ -6,10 +6,12 @@
     "mongoose": "^6.9.1",
     "morgan": "^1.10.0"
   },
+  "proxy": "http://localhost:3001",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "build": "cd client && rm -rf build && npm install && npm run build"
   },
   "name": "trip-planner",
   "description": "## [Live](#) ### Date : Feb 09, 2023",

@@ -28,6 +28,7 @@ const CreateVacation = ({ setIsLoggedIn }) => {
         let filledForm = { numberOfTravelers, location, questionOne, questionTwo, questionThree, freeForm }
         try {
         const response = await axios.post(`http://localhost:3001/api/create/vacations/${id}`, filledForm)
+        navigate(`/planner/${id}`)
         } catch(error) {
             console.log(error);
         }
@@ -94,7 +95,6 @@ const CreateVacation = ({ setIsLoggedIn }) => {
                     />
                     <br />
                     <button type="submit">Submit</button>
-                    {/* onClick={() => navigate(`/planner/${id}`)} */}
                 </form>
             </div>
         </div >
