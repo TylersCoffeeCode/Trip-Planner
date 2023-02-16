@@ -16,7 +16,7 @@ const Dashboard = ({ setIsLoggedIn }) => {
   return (
     <div className="dashboard" style={{}}>
       <div className="dashboardTitle">
-        Welcome User! Let's plan your adventure today
+        Welcome! Let's plan your adventure today
       </div>
       <div className="outerDashboardLeft" style={{}}>
         <div className="dashboardLeftTitle">

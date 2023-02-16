@@ -20,7 +20,9 @@ const Map = ({ setIsLoggedIn }) => {
                     Whether it's a solo trip or a group vacation, Horizon traveling offers the opportunity to escape the monotony of everyday life and create unforgettable memories.
                 </h5>
             </div>
+            <div className="outerMapContainer">
             <div className="outerMap">
+            </div>
             </div>
         </div>
     )
