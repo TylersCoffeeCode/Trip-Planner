@@ -74,7 +74,7 @@ const LoginPage = ({setIsLoggedIn}) => {
           <h4>{errorMessage}</h4>
           <form className="signInForm" onSubmit={handleSubmit}>
             <label htmlFor="email">Email:</label>
-            <input className="emailInput"
+            <input className="emailInput" style={{backgroundColor: '#C3A59F'}}
               id="email"
               type='email'
               onChange={handleChangeEmail}
@@ -82,7 +82,7 @@ const LoginPage = ({setIsLoggedIn}) => {
             />
             <br />
             <label htmlFor="password">Password:</label>
-            <input className="passwordInput"
+            <input className="passwordInput" style={{backgroundColor: '#C3A59F'}}
               id="password"
               type='password'
               onChange={handleChangePassword}
