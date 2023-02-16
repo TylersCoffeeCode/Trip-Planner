@@ -25,8 +25,7 @@ const Dashboard = ({ setIsLoggedIn }) => {
           <div className="leftSectionTileMap" onClick={() => navigate('/map')} style={{cursor: 'pointer'}}>
             <div className="mapTile">
             </div>
-            <div className="mapInfo">
-              All you need is a click to start your journey. <br />
+            <div className="mapInfo"><br />
               Give our map a spin!
             </div>
           </div>
