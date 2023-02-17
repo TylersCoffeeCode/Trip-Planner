@@ -33,15 +33,15 @@ router.post('/createUser', async (req, res) => {
             user, message: 'User Created'
         })
     } catch (e) {
-        return res.status(500).json({message: 'Error occured'})
+        return res.status(500).json({ message: 'Error occured' })
     }
 })
 
 router.get('/gallery', async (req, res) => {
     try {
         const photo = await Country.find()
-        return res.status(200).json({photo})
-    } catch(error) {
+        return res.status(200).json({ photo })
+    } catch (error) {
         return res.status(500).send(error.message)
     }
 })
