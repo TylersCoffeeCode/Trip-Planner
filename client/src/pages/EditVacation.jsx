@@ -21,12 +21,12 @@ const EditVacation = ({ setIsLoggedIn }) => {
     const [questionOne, setQuestionOne] = useState(`${vacation.questionOne}`)
     const [questionTwo, setQuestionTwo] = useState(`${vacation.questionTwo}`)
     const [questionThree, setQuestionThree] = useState(`${vacation.questionThree}`)
-    const [freeForm, setFreeForm] = useState(`${vacation.extraInfo}`)
+    const [extraInfo, setExtraInfo] = useState(`${vacation.extraInfo}`)
 
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        let filledForm = { numberOfTravelers, location, questionOne, questionTwo, questionThree, freeForm }
+        let filledForm = { numberOfTravelers, location, questionOne, questionTwo, questionThree, extraInfo }
         try {
         const response = await axios.put(`/api/users/vacations/${vacation._id}`, filledForm)
         navigate(`/planner/${sessionId}`)
@@ -91,8 +91,8 @@ const EditVacation = ({ setIsLoggedIn }) => {
                     </label>
                     <h2>Additional Info:</h2>
                     <textarea style={{ width: '90%', height: '8rem' }}
-                        value={freeForm}
-                        onChange={e => setFreeForm(e.target.value)}
+                        value={extraInfo}
+                        onChange={e => setExtraInfo(e.target.value)}
                     />
                     <br />
                     <button type="submit">Submit</button>
