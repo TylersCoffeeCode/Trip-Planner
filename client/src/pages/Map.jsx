@@ -9,8 +9,6 @@ const Map = ({ setIsLoggedIn }) => {
 
 
     return (
-
-
         <div className="mapMainDiv">
             <div className="mapTitle">
                 <h1>Oh the places you'll go!</h1>

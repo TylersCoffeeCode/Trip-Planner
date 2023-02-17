@@ -3,7 +3,6 @@ import { useEffect, useState } from "react"
 import { useNavigate, useParams, useLocation} from 'react-router-dom'
 
 
-
 const EditVacation = ({ setIsLoggedIn }) => {
 
     const navigate = useNavigate()
@@ -25,8 +24,7 @@ const EditVacation = ({ setIsLoggedIn }) => {
     const [questionThree, setQuestionThree] = useState(`${vacation.questionThree}`)
     const [freeForm, setFreeForm] = useState(`${vacation.extraInfo}`)
 
-   
-
+    
     const handleSubmit = async (e) => {
         e.preventDefault()
         let filledForm = { numberOfTravelers, location, questionOne, questionTwo, questionThree, freeForm }

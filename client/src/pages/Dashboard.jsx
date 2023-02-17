@@ -3,7 +3,6 @@ import { useState, useEffect, Link } from "react"
 import { Navigate, useNavigate, useParams } from "react-router-dom"
 
 
-
 const Dashboard = ({ setIsLoggedIn }) => {
   useEffect(() => {
     setIsLoggedIn(true)
