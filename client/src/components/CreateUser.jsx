@@ -38,7 +38,6 @@ const CreateUser = () => {
 
     const handleSubmit = async (e) => {
         setErrorMessage('')
-        console.log(`Username:${email} Password:${password}`);
         e.preventDefault()
         if (!firstName || !lastName || !email || !password) {
             setErrorMessage('Please fill out all fields')

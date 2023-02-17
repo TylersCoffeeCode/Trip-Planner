@@ -32,13 +32,11 @@ const LoginPage = ({setIsLoggedIn}) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(`Username: ${email} Password: ${password}`)
     try {
       let user = { email, password }
       let response = await axios.post('/api/login', user)
       console.log(response);
       if (response.data.message === 'Login successful') {
-        console.log('NICE');
         sessionStorage.setItem('userId', response.data.id)
         navigate(`/user/dashboard/${response.data.id}`)
         setIsLoggedIn(true)
