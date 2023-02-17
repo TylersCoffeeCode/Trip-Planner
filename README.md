@@ -18,9 +18,11 @@ Full stack application, using React js and mongoDb, that gives users tools to cr
 - Express
 
 ## Objectives
-  - Using React Js and MongoDB, create a full stack application where users can create,update, and delete entries
+  - Using React Js and MongoDB, create a full stack application with CRUD capabilities
   - Utilize flexbox/grid
   - Contain at least 2 Mongoose Schemas, 40 git commits, code should display date from the back end, and navigate with react router
+  - Create a login/create a user page
+  - Set up back end and front routes to their respective locations
 
 # Preview
 ![titlePreview](./client/src/img/signInPreview.png)
