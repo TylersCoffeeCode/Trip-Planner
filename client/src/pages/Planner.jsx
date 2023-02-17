@@ -17,18 +17,15 @@ const Planner = ({ setIsLoggedIn }) => {
     const getVacations = async () => {
         try {
             const response = await axios.get(`/api/users/vacations/${id}`)
-            console.log(response.data);
             setYourVacation(response.data)
         } catch (error) {
         }
     }
 
     const deleteVacation = async (vacation) => {
-        console.log(vacation._id);
         await axios.delete(`/api/delete/${vacation._id}`)
         try {
             const response = await axios.get(`/api/users/vacations/${id}`)
-            console.log(response.data);
             setYourVacation(response.data)
         } catch (error) {
         }
