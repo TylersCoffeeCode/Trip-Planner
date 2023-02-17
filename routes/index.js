@@ -2,14 +2,12 @@ const { Router } = require('express')
 const controllers = require('../controllers')
 const router = Router()
 const User = require('../models/user')
-const Country = require('../models/country')
 
 router.get('/', (req, res) => res.send('This is root!'))
 
 
 router.get('/users', controllers.getAllUsers)
 router.get('/users/:id', controllers.getUserById)
-// router.post('/users', controllers.createUser)
 router.get('/users/email/:email', controllers.getUserById)
 
 

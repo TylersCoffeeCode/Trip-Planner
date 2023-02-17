@@ -482,7 +482,7 @@ img.cardImg {
 .plannerMainDiv {
   width: 100vw;
   height: 100vh;
-  background-color: blanchedalmond;
+  background-color: rgb(41, 32, 52);
   display: flex;
   justify-content: center;
   align-items: center;

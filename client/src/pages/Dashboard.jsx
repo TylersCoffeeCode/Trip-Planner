@@ -31,8 +31,7 @@ const Dashboard = ({ setIsLoggedIn }) => {
           </div>
           <div className="leftSectionTilePhoto" onClick={() => navigate('/gallery')} style={{cursor: 'pointer'}}>
             <div className="photoTileTitle">
-              <h3 style={{ margin: '0' }}>Need some inspiration?</h3>
-              <h3 style={{ margin: '0' }}>Take a look at our search gallery</h3>
+              <h3 style={{ margin: '0',fontSize: '1em' }}>Need some inspiration? <br /> Take a look at our search gallery</h3>
             </div>
             <div className="photoTileApi">
             </div>
