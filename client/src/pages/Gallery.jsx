@@ -30,7 +30,6 @@ const Gallery = ({ setIsLoggedIn }) => {
                     Authorization: process.env.REACT_APP_PEXEL_API
                 }
             })
-            console.log(response);
             setPhotos(response.data.photos)
         } catch (error) {
             console.log(error)

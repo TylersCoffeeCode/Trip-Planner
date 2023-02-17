@@ -35,7 +35,6 @@ const LoginPage = ({setIsLoggedIn}) => {
     try {
       let user = { email, password }
       let response = await axios.post('/api/login', user)
-      console.log(response);
       if (response.data.message === 'Login successful') {
         sessionStorage.setItem('userId', response.data.id)
         navigate(`/user/dashboard/${response.data.id}`)
@@ -44,7 +43,6 @@ const LoginPage = ({setIsLoggedIn}) => {
         console.log(response.data.message);
       }
     } catch (e) {
-      console.log(e);
       if(e.response.data.message === 'Email not found') {
         setErrorMessage('Email not found')
       } else if(e.response.data.message === 'Your password is incorrect') {

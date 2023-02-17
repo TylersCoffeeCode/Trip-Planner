@@ -69,7 +69,6 @@ const deleteUser = async (req, res) => {
 
 const createVacation = async (req, res) => {
     try {
-        console.log(req.body)
         const { id } = req.params
         const { numberOfTravelers, location, questionOne, questionTwo, questionThree, freeForm } = req.body
         const vacations = await new Vacation({
@@ -113,7 +112,6 @@ const updateUserIdVacation = async (req, res) => {
 const deleteVacation = async (req, res) => {
     try {
         const { id } = req.params
-        console.log(id);
         const deleted = await Vacation.findByIdAndDelete(id)
         if (deleted) {
             return res.status(200).send('Vacation deletion')
