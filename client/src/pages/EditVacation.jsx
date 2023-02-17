@@ -11,7 +11,6 @@ const EditVacation = ({ setIsLoggedIn }) => {
     const { vacation } = locate.state
 
 
-    console.log(vacation);
 
     useEffect(() => {
         setIsLoggedIn(true)
@@ -24,12 +23,12 @@ const EditVacation = ({ setIsLoggedIn }) => {
     const [questionThree, setQuestionThree] = useState(`${vacation.questionThree}`)
     const [freeForm, setFreeForm] = useState(`${vacation.extraInfo}`)
 
-    
+
     const handleSubmit = async (e) => {
         e.preventDefault()
         let filledForm = { numberOfTravelers, location, questionOne, questionTwo, questionThree, freeForm }
         try {
-        const response = await axios.put(`http://localhost:3001/api/users/vacations/${vacation._id}`, filledForm)
+        const response = await axios.put(`/api/users/vacations/${vacation._id}`, filledForm)
         navigate(`/planner/${sessionId}`)
         } catch(error) {
             console.log(error);
