@@ -1,6 +1,6 @@
 # Trip-Planner
 
-## [Live](https://dashboard.heroku.com/apps/horizon-trip-planner)
+## [Live](https://horizon-trip-planner.herokuapp.com/)
 ### Date : Feb 09, 2023
 
 
